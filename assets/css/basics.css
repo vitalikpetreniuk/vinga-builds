@@ -1,0 +1,101 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: 0;
+}
+
+p {
+  margin: 0 0 1.25rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 574px) {
+  h1 {
+    font-size: 1.125rem;
+  }
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+@media only screen and (max-width: 1260px) {
+  h2 {
+    font-size: 1.625rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  h2 {
+    font-size: 1.375rem;
+  }
+}
+
+@media only screen and (max-width: 574px) {
+  h2 {
+    font-size: 1.125rem;
+  }
+}
+
+h3 {
+  font-size: 1.375rem;
+}
+
+@media only screen and (max-width: 1260px) {
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 574px) {
+  h3 {
+    font-size: 1.125rem;
+  }
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+@media only screen and (max-width: 1260px) {
+  h4 {
+    font-size: 1.125rem;
+  }
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+@media only screen and (max-width: 1260px) {
+  h5 {
+    font-size: 1rem;
+  }
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+  line-height: 1.4285;
+}
