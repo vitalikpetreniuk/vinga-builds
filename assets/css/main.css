@@ -2730,7 +2730,7 @@ body {
   transition: 250ms ease-in-out;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1261px) {
   .product-card:not(.product-card--compare):hover {
     z-index: 2;
     -webkit-box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
@@ -3566,7 +3566,7 @@ body {
   padding-top: 3.75rem;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1260px) {
   .product-detail__aside {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -4742,7 +4742,7 @@ body {
   background-repeat: no-repeat;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1260px) {
   .wiget__swiper-buttons .swiper-button-prev::before {
     background-image: url("../img/svg-sprite/sprite.svg");
     background-position: -4px -1117px;
@@ -4760,7 +4760,7 @@ body {
   background-repeat: no-repeat;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1260px) {
   .wiget__swiper-buttons .swiper-button-next::before {
     background-image: url("../img/svg-sprite/sprite.svg");
     background-position: -4px -1159px;
@@ -8454,4 +8454,90 @@ h6, .article-card__title, .product-card__title {
 h1, .section__title, .article__map-title, h2, .reviews__heading, .shops__title, h3, h4, .properties__title, h5, .wiget__title, .modal__title, .compare__title, h6, .article-card__title, .product-card__title {
   color: #000;
   line-height: 1.4285;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: -8px;
+}
+
+@media only screen and (max-width: 574px) {
+  table tbody {
+    display: block;
+  }
+}
+
+table th {
+  color: #000;
+  text-align: left;
+}
+
+table tr:nth-child(odd) {
+  background: #F4F4F4;
+}
+
+table tr th, table tr td {
+  padding: 10px;
+  border: none;
+  width: 50%;
+  border-bottom: 1px solid #DBE5E9;
+  vertical-align: top;
+}
+
+@media only screen and (max-width: 574px) {
+  table tr th, table tr td {
+    padding: 0;
+    display: block;
+    width: 100%;
+    border-bottom: 0;
+  }
+}
+
+table tr tr {
+  background: none !important;
+}
+
+table tr tr:not(:last-child) {
+  border-bottom: 1px solid #F4F4F4;
+}
+
+@media only screen and (max-width: 574px) {
+  table tr tr {
+    margin-bottom: 0.625rem;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 574px) {
+  table {
+    display: block;
+  }
+  table th {
+    padding-bottom: 5px;
+  }
+  table td {
+    padding-top: 5px;
+  }
+  table tr table td td {
+    width: 50%;
+    display: table-cell;
+  }
+  table tr table td td:nth-child(1) {
+    min-width: 130px;
+  }
+}
+
+.video-container {
+  height: 0;
+  padding-bottom: 56.24%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

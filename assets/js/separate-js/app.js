@@ -280,7 +280,7 @@ $(document).ready(function(){
 
   $(document).mousemove(function(event) {
       if (window.innerWidth > 574) {
-          if ($(event.target).closest(".page-nav__item").length || $('.search-site__hint.is-active').length || $('body.page--menu').length) {
+          if ($(event.target).closest(".page-nav__item").length || $('.search-site__hint.is-active').length || $('body.page--menu').length || $('body.page--filter').length) {
               _overlay.addClass("is-visible");
           } else {
               _overlay.removeClass("is-visible");
@@ -290,7 +290,7 @@ $(document).ready(function(){
 
   _window.on('resize', debounce(function(){
     if (window.innerWidth <= 574) {
-      _overlay.removeClass("is-visible");
+      // _overlay.removeClass("is-visible");
     }
   }, 100))
 
@@ -340,18 +340,22 @@ $(document).ready(function(){
 
   _document.on("click", ".js-filter-toggle", filter.toggle);
 
+  $('.js-filter-toggle').on('click', function () {
+      _overlay.toggleClass('is-visible');
+  });
+
   _overlay.on("click", function() {
       nav.close();
       filter.close();
   });
 
-  new Swiper('.js-product-photo-slider', {
+  var productSlider = new Swiper('.js-product-photo-slider', {
     loop: true,
     navigation: {
         prevEl: ".swiper-button-prev",
         nextEl: ".swiper-button-next"
-    },
-  })
+    }
+  });
 
   new Swiper(".js-promo-slider", {
       loop: true,
@@ -378,6 +382,10 @@ $(document).ready(function(){
         nextEl: ".js-products-related-nav .swiper-button-next"
       },
       breakpoints: {
+          1260: {
+            slidesPerView: 3,
+            direction: 'horizontal'
+          },
           1023: {
             slidesPerView: 2,
             direction: 'horizontal'
@@ -1017,5 +1025,19 @@ $(document).ready(function(){
             $("select").select2('close');
         }
     });
+
+    _window.on('load resize', function () {
+        if (window.matchMedia('(min-width: 1261px)').matches) {
+            if(_body.hasClass('page--menu')){
+                $('.js-nav-toggle').trigger('click');
+            }
+        }else if(window.matchMedia('(min-width: 1024px)').matches){
+            if(_body.hasClass('page--filter')){
+                $('.js-filter-toggle').trigger('click');
+            }
+        }
+    });
+
+
 
 });
