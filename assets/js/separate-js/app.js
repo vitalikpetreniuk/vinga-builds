@@ -184,22 +184,22 @@ $(document).ready(function () {
     });
 
 
-    function initStickInParentFilter() {
-        var $filter = $('.js-filter');
+    // function initStickInParentFilter() {
+    //     var $filter = $('.js-filter');
+    //
+    //     if (_window.width() >= 1024) {
+    //         $filter.stick_in_parent({
+    //             offset_top: $('.js-navbar').height(),
+    //             recalc_every: 1
+    //         });
+    //
+    //         $filter.trigger("sticky_kit:recalc");
+    //     } else {
+    //         $filter.trigger("sticky_kit:detach");
+    //     }
+    // }
 
-        if (_window.width() >= 1024) {
-            $filter.stick_in_parent({
-                offset_top: $('.js-navbar').height(),
-                // recalc_every: 1
-            });
-
-            $filter.trigger("sticky_kit:recalc");
-        } else {
-            $filter.trigger("sticky_kit:detach");
-        }
-    }
-
-    _window.on('load resize', initStickInParentFilter);
+    // _window.on('load resize', initStickInParentFilter);
 
     _document.on("click", ".product-filter__title", function () {
         $(this)
