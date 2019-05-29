@@ -2492,6 +2492,13 @@ body {
   }
 }
 
+.product-filter__empty {
+  padding: 1.0625rem 20px;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 700;
+  font-size: 14px;
+}
+
 .product-filter__group {
   border-bottom: 1px solid #F4F4F4;
 }
