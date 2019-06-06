@@ -755,11 +755,6 @@ label.error {
   height: 100%;
 }
 
-.article-card:hover .article-card__img {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
 @media only screen and (min-width: 768px) {
   .article-card--inline {
     -webkit-box-orient: horizontal;
