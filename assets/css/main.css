@@ -756,8 +756,8 @@ label.error {
 }
 
 .article-card:hover .article-card__img {
-  -webkit-transform: scale(1.05) rotate(2deg);
-          transform: scale(1.05) rotate(2deg);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 @media only screen and (min-width: 768px) {
@@ -6431,6 +6431,7 @@ body {
   background-color: #F4F4F4;
   border-bottom: 10px solid #FFF;
   vertical-align: top;
+  width: auto;
 }
 
 .shops__td:not(:last-child)::after {
